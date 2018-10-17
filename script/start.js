@@ -17,6 +17,7 @@ function startRenderer() {
           resolve();
         });
       },
+      hot: true,
       host: 'localhost'
     };
     WebpackDevServer.addDevServerEntrypoints(config, options);
