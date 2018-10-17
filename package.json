@@ -4,9 +4,9 @@
   "description": "electron-vue-typescript-template",
   "main": "dist/application.js",
   "scripts": {
-    "start": "run-p -r webpack electron:start",
-    "electron:start": "cpx src/main/application.js dist/ && electron .",
-    "webpack": "webpack-dev-server --mode development"
+    "start": "run-s electron:copy webpack:start",
+    "electron:copy": "cpx src/main/application.js dist/",
+    "webpack:start": "node script/start.js"
   },
   "author": "ryo7000",
   "license": "MIT",
