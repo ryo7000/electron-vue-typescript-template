@@ -7,7 +7,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: './src/renderer/index.js',
+  entry: './src/renderer/index.ts',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
@@ -25,7 +25,23 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.ts/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              appendTsSuffixTo: [/\.vue$/],
+            }
+          },
+        ]
+      },
     ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
