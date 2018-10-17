@@ -34,4 +34,5 @@ module.exports = {
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
+  devtool: 'eval-source-map'
 };
