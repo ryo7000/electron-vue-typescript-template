@@ -13,5 +13,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/renderer/index.html'
     }),
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+  }
 };
