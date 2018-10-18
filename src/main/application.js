@@ -14,7 +14,8 @@ function createWindow () {
   win.loadURL('http://localhost:8080/')
 
   // Open the DevTools.
-  win.webContents.openDevTools()
+  win.webContents.openDevTools({ mode: 'detach' })
+  win.setMenu(null);
 
   // Emitted when the window is closed.
   win.on('closed', () => {
