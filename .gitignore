@@ -79,4 +79,7 @@ typings/
 # Webpack dist
 dist/
 
+# cache-loader
+.cache-loader
+
 # End of https://www.gitignore.io/api/node

@@ -29,6 +29,9 @@ module.exports = {
         test: /\.ts/,
         use: [
           {
+            loader: 'cache-loader',
+          },
+          {
             loader: 'ts-loader',
             options: {
               appendTsSuffixTo: [/\.vue$/],
