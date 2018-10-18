@@ -5,6 +5,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@*": ["src/renderer*"]
+    }
   }
 }
