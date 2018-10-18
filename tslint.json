@@ -1,15 +1,12 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended",
-        "tslint-config-prettier"
-    ],
-    "jsRules": {},
-    "rules": {
-      "no-consecutive-blank-lines": false,
-      "member-access": false,
-      "object-literal-sort-keys": false,
-      "no-console": false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "no-consecutive-blank-lines": false,
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "no-console": false
+  },
+  "rulesDirectory": []
 }
