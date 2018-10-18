@@ -4,6 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -35,6 +36,7 @@ module.exports = {
             loader: 'ts-loader',
             options: {
               appendTsSuffixTo: [/\.vue$/],
+              transpileOnly: true
             }
           },
           {
@@ -62,6 +64,13 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new ForkTsCheckerWebpackPlugin(
+      {
+        tslint: true,
+        vue: true,
+        formatter: 'codeframe'
+      }
+    ),
   ],
   devtool: 'eval-source-map'
 };
