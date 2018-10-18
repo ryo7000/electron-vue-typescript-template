@@ -72,5 +72,6 @@ module.exports = {
       }
     ),
   ],
+  target: 'electron-renderer',
   devtool: 'eval-source-map'
 };
