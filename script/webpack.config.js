@@ -34,6 +34,9 @@ module.exports = {
               appendTsSuffixTo: [/\.vue$/],
             }
           },
+          {
+            loader: 'tslint-loader',
+          }
         ]
       },
     ]
