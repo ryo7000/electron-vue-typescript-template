@@ -1,12 +1,17 @@
 "use strict";
 
 const { app, BrowserWindow } = require("electron");
+const isDev = require("electron-is-dev");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
 
 function createWindow() {
+  if (isDev) {
+    require('vue-devtools').install();
+  }
+
   // Create the browser window.
   win = new BrowserWindow({ width: 800, height: 600 });
 
