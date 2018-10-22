@@ -54,7 +54,8 @@ module.exports = {
     alias: {
       "@": path.join(__dirname, "../src/renderer"),
       vue$: "vue/dist/vue.esm.js"
-    }
+    },
+    extensions: ['.js', '.ts', '.vue']
   },
   plugins: [
     new HtmlWebpackPlugin({
