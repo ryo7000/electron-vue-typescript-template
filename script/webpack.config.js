@@ -38,9 +38,6 @@ module.exports = {
               appendTsSuffixTo: [/\.vue$/],
               transpileOnly: true
             }
-          },
-          {
-            loader: "tslint-loader"
           }
         ]
       },
@@ -64,7 +61,6 @@ module.exports = {
     new VueLoaderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
-      tslint: true,
       vue: true,
       formatter: "codeframe"
     })
